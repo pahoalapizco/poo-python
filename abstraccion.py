@@ -4,7 +4,7 @@ class Lavadora:
     def __init__(self):
       pass
     
-    # la función lavar() abstrae el proceso de lavado, mandando llamar
+    # El método lavar() abstrae el proceso de lavado, mandando llamar
     # a aquellas funciones que realizadn dicho proceso.
     def lavar(self, temperatura='caliente'):
       self._llenar_tanque(temperatura)
@@ -12,6 +12,7 @@ class Lavadora:
       self._lavar()
       self._centrifugar()
 
+    # Son métodos abstractos por que son utilizados por otro método interno de la clase y no por el usuario(programador)
     def _llenar_tanque(self, temperatura):
        print(f'Llenando el tanque con agua {temperatura}')
     
